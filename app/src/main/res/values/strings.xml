@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">something</string>
+    <string name="heading">HEADING</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+    <string name="back">BACK</string>
+    <string name="next">NEXT</string>
+    <string name="sampletext">Da Nang International Nang International Fireworks Festival 2017Update: Dec 08, 2016 (TITC) - Da Nang International Fireworks Festival 2017 (DIFF 2017)Nang International Fireworks Festival 2017Update: Dec 08, 2016 (TITC) - Da Nang International Fireworks Festival 2017 (DIFF 2017)Nang International Fireworks Festival 2017Update: Dec 08, 2016 (TITC) - Da Nang International Fireworks Festival 2017 (DIFF 2017)Fireworks Festival 2017Update: Dec 08, 2016 (TITC) - Da Nang International Fireworks Festival 2017 (DIFF 2017) Nang International Fireworks Festival 2017Update: Dec 08, 2016 (TITC) - Da Nang International Fireworks Festival 2017 (DIFF 2017) with the theme “Shining Marble Mountains” will take place for two months, from 29 April to 24 June 2017 with the aim to Da Nang become a unique cultural festival tourism space.</string>
+    <string name="homeHeading">Think some Unique Name</string>
+</resources>

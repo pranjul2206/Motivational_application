@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".second"
+    android:orientation="vertical"
+    android:background="#fcfcfc"
+    android:layout_columnWeight="10">
+
+    <!--for the homepage vanishing image -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/black"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/app_name"
+            >
+
+
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iamges" />
+
+            <TextView
+                android:layout_width="168dp"
+                android:layout_height="34dp"
+                android:text="@string/homeHeading"
+                android:textColor="@color/black" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <!-- homepge content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="#fcfcfc"
+            android:gravity="center"
+            android:id="@+id/ll">
+            >
+            <LinearLayout
+
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/bubble"
+                    android:layout_width="300dp"
+                    android:layout_height="270dp"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- bubble is here!! -->
+                        <me.itangqi.waveloadingview.WaveLoadingView
+                            android:id="@+id/waveLoadingView"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:wlv_borderColor="@color/colorPrimary"
+                            app:wlv_borderWidth="3dp"
+                            app:wlv_shapeType="circle"
+                            app:wlv_round_rectangle="true"
+                            app:wlv_triangle_direction="north"
+
+                            app:wlv_titleCenterStrokeColor="@color/colorAccent"
+                            app:wlv_titleCenterStrokeWidth="3dp"
+                            app:wlv_titleCenterColor="@color/colorPrimaryDark"
+                            app:wlv_titleCenterSize="24sp"
+
+                            app:wlv_titleTopStrokeColor="@color/colorAccent"
+                            app:wlv_titleTopStrokeWidth="3dp"
+                            app:wlv_titleTopColor="@color/colorPrimaryDark"
+                            app:wlv_titleTopSize="24sp"
+
+                            app:wlv_titleBottomStrokeColor="@color/colorAccent"
+                            app:wlv_titleBottomStrokeWidth="3dp"
+                            app:wlv_titleBottomColor="@color/colorPrimaryDark"
+                            app:wlv_titleBottomSize="24sp"
+
+                            app:wlv_waveAmplitude="70"
+                            app:wlv_waveColor="@color/colorPrimary"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatSeekBar
+                            android:id="@+id/seekbar"
+                            android:max="100"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+
+
+                        <!-- bubble was here!! -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="253 steps taken"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="114 meters travelled"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <technolifestyle.com.imageslider.FlipperLayout
+                    android:id="@+id/flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                </technolifestyle.com.imageslider.FlipperLayout>
+            </LinearLayout>
+            <!-- column1 -->
+            <LinearLayout
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/card1"
+                    android:layout_width="170dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifView1"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/colourtile1"
+                            android:src="@drawable/source"
+                            android:textAlignment="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Activity"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Click to check your activities"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/card2"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifView2"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/colourtile2"
+                            android:src="@drawable/running"
+                            android:textAlignment="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Exercies"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Check your bank activities"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+            <!-- colummn2 -->
+            <LinearLayout
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/card3"
+                    android:layout_width="170dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifView3"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/colourtile3"
+                            android:src="@drawable/foodintake"
+                            android:textAlignment="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Food calories"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Calculate your intake Calories"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/card4"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifView4"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/colourtile4"
+                            android:src="@drawable/sleeptime"
+                            android:textAlignment="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Sleep Time"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Track your Sleeping Hours"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+       
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+    <!-- swiping images yahan s start -->
+    </android.support.design.widget.CoordinatorLayout>
